@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 1e079ea5c4787ca438362604af81f5c3
+timeCreated: 1516887123
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bottom
+    100002: brakes_LF
+    100004: brakes_LR
+    100006: //RootNode
+    100008: CARRERA
+    100010: door
+    100012: front lamp glass
+    100014: hood gap
+    100016: rear glass
+    100018: rear lamp
+    100020: wheel_LF
+    100022: wheel_LR
+    100024: windshield]
+    100026: bufera plastmasas
+    100028: reflectors
+    100030: inside
+    100032: rear_logo
+    100034: door_left_inside
+    100036: pedals
+    100038: steering wheel
+    100040: dash
+    100042: seat
+    100044: door glass
+    100046: small glass
+    100048: spoiler plastmasa
+    100050: spoileris
+    100052: brakes_LF001
+    100054: tyre
+    100056: tyre001
+    100058: wheel_LF001
+    100060: door frame
+    100062: handle
+    100064: logu gumijas
+    100066: mirror
+    100068: brakes003
+    100070: brakes004
+    100072: brakes1
+    100074: brakes2
+    100076: left door glass
+    100078: right door glass
+    100080: rim003
+    100082: rim004
+    100084: rim1
+    100086: rim2
+    100088: tyre003
+    100090: tyre004
+    100092: tyre1
+    100094: tyre2
+    100096: windows
+    100098: front lamps
+    100100: left mirror
+    100102: matte1
+    100104: rear lamps
+    100106: right mirror
+    100108: left_door
+    100110: left_door_gloss
+    100112: right_door
+    100114: right_door_gloss
+    100116: steering_wheel
+    100118: salon mirror
+    100120: MIRRORS
+    100122: spoiler1
+    100124: spoiler2
+    400000: bottom
+    400002: brakes_LF
+    400004: brakes_LR
+    400006: //RootNode
+    400008: CARRERA
+    400010: door
+    400012: front lamp glass
+    400014: hood gap
+    400016: rear glass
+    400018: rear lamp
+    400020: wheel_LF
+    400022: wheel_LR
+    400024: windshield]
+    400026: bufera plastmasas
+    400028: reflectors
+    400030: inside
+    400032: rear_logo
+    400034: door_left_inside
+    400036: pedals
+    400038: steering wheel
+    400040: dash
+    400042: seat
+    400044: door glass
+    400046: small glass
+    400048: spoiler plastmasa
+    400050: spoileris
+    400052: brakes_LF001
+    400054: tyre
+    400056: tyre001
+    400058: wheel_LF001
+    400060: door frame
+    400062: handle
+    400064: logu gumijas
+    400066: mirror
+    400068: brakes003
+    400070: brakes004
+    400072: brakes1
+    400074: brakes2
+    400076: left door glass
+    400078: right door glass
+    400080: rim003
+    400082: rim004
+    400084: rim1
+    400086: rim2
+    400088: tyre003
+    400090: tyre004
+    400092: tyre1
+    400094: tyre2
+    400096: windows
+    400098: front lamps
+    400100: left mirror
+    400102: matte1
+    400104: rear lamps
+    400106: right mirror
+    400108: left_door
+    400110: left_door_gloss
+    400112: right_door
+    400114: right_door_gloss
+    400116: steering_wheel
+    400118: salon mirror
+    400120: MIRRORS
+    400122: spoiler1
+    400124: spoiler2
+    2300000: bottom
+    2300002: brakes_LF
+    2300004: brakes_LR
+    2300006: CARRERA
+    2300008: door
+    2300010: front lamp glass
+    2300012: hood gap
+    2300014: rear glass
+    2300016: rear lamp
+    2300018: wheel_LF
+    2300020: wheel_LR
+    2300022: windshield]
+    2300024: bufera plastmasas
+    2300026: reflectors
+    2300028: inside
+    2300030: rear_logo
+    2300032: door_left_inside
+    2300034: pedals
+    2300036: steering wheel
+    2300038: dash
+    2300040: seat
+    2300042: door glass
+    2300044: small glass
+    2300046: spoiler plastmasa
+    2300048: spoileris
+    2300050: brakes_LF001
+    2300052: tyre
+    2300054: tyre001
+    2300056: wheel_LF001
+    2300058: door frame
+    2300060: handle
+    2300062: logu gumijas
+    2300064: mirror
+    2300066: brakes003
+    2300068: brakes004
+    2300070: brakes1
+    2300072: brakes2
+    2300074: left door glass
+    2300076: right door glass
+    2300078: rim003
+    2300080: rim004
+    2300082: rim1
+    2300084: rim2
+    2300086: tyre003
+    2300088: tyre004
+    2300090: tyre1
+    2300092: tyre2
+    2300094: windows
+    2300096: front lamps
+    2300098: left mirror
+    2300100: matte1
+    2300102: rear lamps
+    2300104: right mirror
+    2300106: //RootNode
+    2300108: left_door
+    2300110: left_door_gloss
+    2300112: right_door
+    2300114: right_door_gloss
+    2300116: steering_wheel
+    2300118: salon mirror
+    2300120: MIRRORS
+    2300122: spoiler1
+    2300124: spoiler2
+    3300000: bottom
+    3300002: brakes_LF
+    3300004: brakes_LR
+    3300006: CARRERA
+    3300008: door
+    3300010: front lamp glass
+    3300012: hood gap
+    3300014: rear glass
+    3300016: rear lamp
+    3300018: wheel_LF
+    3300020: wheel_LR
+    3300022: windshield]
+    3300024: bufera plastmasas
+    3300026: reflectors
+    3300028: inside
+    3300030: rear_logo
+    3300032: door_left_inside
+    3300034: pedals
+    3300036: steering wheel
+    3300038: dash
+    3300040: seat
+    3300042: door glass
+    3300044: small glass
+    3300046: spoiler plastmasa
+    3300048: spoileris
+    3300050: brakes_LF001
+    3300052: tyre
+    3300054: tyre001
+    3300056: wheel_LF001
+    3300058: door frame
+    3300060: handle
+    3300062: logu gumijas
+    3300064: mirror
+    3300066: brakes003
+    3300068: brakes004
+    3300070: brakes1
+    3300072: brakes2
+    3300074: left door glass
+    3300076: right door glass
+    3300078: rim003
+    3300080: rim004
+    3300082: rim1
+    3300084: rim2
+    3300086: tyre003
+    3300088: tyre004
+    3300090: tyre1
+    3300092: tyre2
+    3300094: windows
+    3300096: front lamps
+    3300098: left mirror
+    3300100: matte1
+    3300102: rear lamps
+    3300104: right mirror
+    3300106: //RootNode
+    3300108: left_door
+    3300110: left_door_gloss
+    3300112: right_door
+    3300114: right_door_gloss
+    3300116: steering_wheel
+    3300118: salon mirror
+    3300120: MIRRORS
+    3300122: spoiler1
+    3300124: spoiler2
+    4300000: brakes_LR
+    4300002: wheel_LR
+    4300004: brakes_LF
+    4300006: wheel_LF
+    4300008: CARRERA
+    4300010: front lamp glass
+    4300012: rear glass
+    4300014: hood gap
+    4300016: rear lamp
+    4300018: windshield]
+    4300020: door
+    4300022: bottom
+    4300024: reflectors
+    4300026: bufera plastmasas
+    4300028: inside
+    4300030: rear_logo
+    4300032: pedals
+    4300034: steering wheel
+    4300036: door_left_inside
+    4300038: dash
+    4300040: seat
+    4300042: door glass
+    4300044: small glass
+    4300046: spoileris
+    4300048: spoiler plastmasa
+    4300050: tyre
+    4300052: tyre001
+    4300054: brakes_LF001
+    4300056: wheel_LF001
+    4300058: logu gumijas
+    4300060: door frame
+    4300062: handle
+    4300064: mirror
+    4300066: rim1
+    4300068: tyre1
+    4300070: brakes1
+    4300072: tyre2
+    4300074: brakes2
+    4300076: rim2
+    4300078: rim003
+    4300080: brakes003
+    4300082: tyre003
+    4300084: tyre004
+    4300086: rim004
+    4300088: brakes004
+    4300090: windows
+    4300092: left door glass
+    4300094: right door glass
+    4300096: front lamps
+    4300098: rear lamps
+    4300100: right mirror
+    4300102: left mirror
+    4300104: matte1
+    4300106: steering_wheel
+    4300108: left_door_gloss
+    4300110: left_door
+    4300112: right_door_gloss
+    4300114: right_door
+    4300116: salon mirror
+    4300118: MIRRORS
+    4300120: spoiler1
+    4300122: spoiler2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

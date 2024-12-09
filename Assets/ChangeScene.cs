@@ -14,6 +14,7 @@ public class HomeScene : MonoBehaviour
     private void Start()
     {
         // Register a listener for the button click event
+        Time.timeScale = 1f;
         sceneChangeButton.onClick.AddListener(ChangeScene);
     }
 

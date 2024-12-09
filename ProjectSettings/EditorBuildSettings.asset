@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/WelcomeScene.unity
+    guid: 2d79807284aa23f4a9a1c264361998c0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/CoffeeShop.unity
-    guid: a24cab69c742e9f4f8bff9e5f8119a1f
   - enabled: 1
     path: Assets/CoffeeShopStarterPack/Scenes/CoffeeShop.unity
     guid: 54b91dada95464896b59abb87c70cccc
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CinemaGame.unity
     guid: f72a96a7e82d7844f8318460496d1ce9
+  - enabled: 1
+    path: Assets/RacingMinigame/RacingMinigameScene.unity
+    guid: ec8ec3b2edc576a499d872ff0da72af6
+  - enabled: 1
+    path: Assets/Scenes/ContinueScene.unity
+    guid: ed196da786a79b04f90c5fda70bed51a
   m_configObjects: {}

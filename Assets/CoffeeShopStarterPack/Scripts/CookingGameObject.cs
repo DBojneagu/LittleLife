@@ -1,23 +1,12 @@
-﻿// ******------------------------------------------------------******
-// CookingGameObject.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 namespace PW
 {
     public class CookingGameObject : MonoBehaviour
     {
 
-        //offset to Pivot, Vector3.zero is the default.
         public Vector3 cookingSpot;
 
-        //Animation starting position can be set here,zero is default.
         public Vector3 startingPositionOffset;
 
         public CookableProduct currentProduct;
@@ -48,13 +37,7 @@ namespace PW
                 m_progressHelper.ToggleHelper(false);
             }
         }
-        /// <summary>
-        /// We use this method to make this available through a system,
-        /// if you had more than one cooking object and a manager had selected one of the pans,
-        /// you would get this script from the array and just call this method
-        /// to get the exact position of the available cooking object.
-        /// </summary>
-        /// <returns>Cooking position of the object in WorldPos with offset</returns>
+
         public virtual Vector3 GetCookingPosition()
         {
             return transform.position + cookingSpot;
@@ -117,7 +100,6 @@ namespace PW
         {
             if(currentProduct!=null && currentProduct.IsCooked)
             {
-                //Try to serve currentProduct if player slots are available
                 if(currentProduct.CanGoPlayerSlot())
                     ReadyToServe();
             }

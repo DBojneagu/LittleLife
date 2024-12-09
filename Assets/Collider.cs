@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 public class MovieCollider : MonoBehaviour
 {
     [Header("Cinema Game Scene")]
-    public SceneAsset cinemaGameSceneAsset; // Reference to the Cinema Game scene
+    //public SceneAsset cinemaGameSceneAsset; // Reference to the Cinema Game scene
     public Q2 taskCompletion;
+    public string sceneToLoad;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,10 +20,9 @@ public class MovieCollider : MonoBehaviour
 
     private void LoadCinemaGameScene()
     {
-        if (cinemaGameSceneAsset != null)
+        if (sceneToLoad != null)
         {
-            string sceneName = cinemaGameSceneAsset.name;
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneToLoad);
         }
         else
         {
@@ -43,7 +43,7 @@ public class MovieCollider : MonoBehaviour
         }
         else
         {
-            Debug.LogError("TaskCompletion component not assigned.");
+            Debug.Log("TaskCompletion component not assigned.");
         }
         PlayerPrefs.SetInt("Points", 0);
         PlayerPrefs.Save();

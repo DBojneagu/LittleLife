@@ -1,13 +1,4 @@
-﻿// ******------------------------------------------------------******
-// CookableProuct.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 namespace PW
 {
@@ -35,8 +26,6 @@ namespace PW
 
         private void Start()
         {
-            //If you didn't set a Cookingobject yourself,
-            //We'll try to get one from the scene when available
             if (cookingObject == null)
                 cookingObject = FindObjectOfType<CookingGameObject>();
         }
@@ -50,7 +39,6 @@ namespace PW
 
         void OnMouseDown()
         {
-            //If cooking object is not available do not proceede
             if (cookingObject == null)
                 return;
             if (!cookingObject.IsEmpty() && !IsCooked)
@@ -78,15 +66,12 @@ namespace PW
 
         public override IEnumerator MoveToPlace(Vector3 targetPos)
         {
-            //When we start moving the product do the necessary animations on cooking mechanism
-            //like microwave or stove door open close animations
             cookingObject.DoDoorAnimationsIfNeeded();
             yield return new WaitForSeconds(cookingObject.doorAnimTime);
             yield return base.MoveToPlace(targetPos);
 
             m_collider.enabled = false;
 
-            //check again anyway so that we dont try to cook two things in the same place
 
             if (cookingObject.IsEmpty())
                 cookingObject.StartCooking(this);

@@ -1,12 +1,4 @@
-﻿// ******------------------------------------------------------******
-// DeleteProductOnSlot.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,11 +18,9 @@ public class DeleteProductOnSlot : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         deleteButton = GetComponentInChildren<Button>();
-        //here we're adding onClick event to buttons from script.
         
         deleteButton.onClick.AddListener(delegate
         {
-            //This will not be called unless user clicked on the button.
             DeletePlayerSlotImage();
         });
 
@@ -55,8 +45,6 @@ public class DeleteProductOnSlot : MonoBehaviour, IPointerClickHandler
         GetComponent<Image>().sprite = null;
         BasicGameEvents.RaiseOnProductDeletedFromSlot(SlotIndex);
     }
-
-    //This is for detecting click events on UI objects
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)

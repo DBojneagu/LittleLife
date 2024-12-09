@@ -1,12 +1,4 @@
-﻿// ******------------------------------------------------------******
-// Microwave.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
+﻿
 using UnityEngine;
 using System.Collections;
 namespace PW
@@ -14,7 +6,7 @@ namespace PW
 
     public class Microwave : MonoBehaviour
     {
-        HeatableProduct currentProduct; // The product we currently heating inside
+        HeatableProduct currentProduct; 
         bool doorIsOpen;
 
         public Transform door;
@@ -36,7 +28,6 @@ namespace PW
         }
         private void Start()
         {
-            //Instantiate and set the UI indicator
             if (progressHelperprefab != null)
             {
                 m_progressHelper = Instantiate(progressHelperprefab, transform).GetComponent<ProgressHelper>();

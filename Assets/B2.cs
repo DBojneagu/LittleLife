@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+
 
 public class ButtonActivation2 : MonoBehaviour
 {
@@ -19,6 +21,16 @@ public class ButtonActivation2 : MonoBehaviour
         gameObject.SetActive(false);
         int nrcoins = PlayerPrefs.GetInt("EarnedCoins");
         nrcoins += 50;
+
+        string userPath = Application.dataPath + "/Data/UserData.json";
+        string json = File.ReadAllText(userPath);
+        UserData user = JsonUtility.FromJson<UserData>(json);
+
+        user.Score += 50;
+
+        json = JsonUtility.ToJson(user, true);
+        File.WriteAllText(userPath, json);
+
         PlayerPrefs.SetInt("EarnedCoins", nrcoins);
         PlayerPrefs.Save();
         PlayerPrefs.SetInt("CompletedClaimMovie", 1);

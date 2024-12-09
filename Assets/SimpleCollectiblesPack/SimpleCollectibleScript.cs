@@ -8,9 +8,9 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	public CollectibleTypes CollectibleType; // this gameObject's type
 
-	public bool rotate; // do you want it to rotate?
+	private bool rotate=true; // do you want it to rotate?
 
-	public float rotationSpeed;
+	private float rotationSpeed=50.0f;
 
 	public AudioClip collectSound;
 
@@ -83,7 +83,5 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 			Debug.Log ("Do NoType Command");
 		}
-
-		Destroy (gameObject);
 	}
 }

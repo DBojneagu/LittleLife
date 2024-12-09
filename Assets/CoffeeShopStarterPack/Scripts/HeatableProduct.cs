@@ -1,15 +1,4 @@
-﻿// ******------------------------------------------------------******
-// HeatableProduct.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-//
-// ******------------------------------------------------------******
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

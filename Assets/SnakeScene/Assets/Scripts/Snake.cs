@@ -1,5 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Snake : MonoBehaviour
@@ -11,6 +16,10 @@ public class Snake : MonoBehaviour
     public int initialSize = 4;
     public bool moveThroughWalls = false;
 
+    public Text gameOverText;
+    public Button restartButton;
+    public Canvas gameCanvas;
+    private bool isMoving = true;
     private List<Transform> segments = new List<Transform>();
     private Vector2Int input;
     private float nextUpdate;
@@ -44,6 +53,10 @@ public class Snake : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isMoving || Time.time < nextUpdate)
+        {
+            return;
+        }
         // Wait until the next update before proceeding
         if (Time.time < nextUpdate) {
             return;
@@ -76,26 +89,35 @@ public class Snake : MonoBehaviour
         Transform segment = Instantiate(segmentPrefab);
         segment.position = segments[segments.Count - 1].position;
         segments.Add(segment);
+        Debug.Log("Inside Grow");
+        Debug.Log(segments);
     }
 
     public void ResetState()
     {
+
+        Debug.Log("Inside Reset State");
         direction = Vector2Int.right;
         transform.position = Vector3.zero;
 
         // Start at 1 to skip destroying the head
-        for (int i = 1; i < segments.Count; i++) {
+        // Start at 1 to skip destroying the head
+        for (int i = segments.Count - 1; i > 0; i--)
+        {
             Destroy(segments[i].gameObject);
         }
 
         // Clear the list but add back this as the head
         segments.Clear();
         segments.Add(transform);
-
+        Debug.Log("Before loop");
         // -1 since the head is already in the list
-        for (int i = 0; i < initialSize - 1; i++) {
+        for (int i = 0; i < initialSize - 1; i++)
+        {
             Grow();
         }
+
+        Debug.Log("After Loop");
     }
 
     public bool Occupies(int x, int y)
@@ -119,13 +141,35 @@ public class Snake : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
-            ResetState();
+            // Set game over text and score
+            int points = (segments.Count - initialSize) * 10;
+
+            string userPath = Application.dataPath + "/Data/UserData.json";
+            string json = File.ReadAllText(userPath);
+            UserData user = JsonUtility.FromJson<UserData>(json);
+
+            user.Score += points;
+
+            json = JsonUtility.ToJson(user, true);
+            File.WriteAllText(userPath, json);
+
+            gameOverText.text = "Game Over! Score: " + (segments.Count - initialSize) * 10;
+            PlayerPrefs.SetInt("PointsSnake", points);
+            PlayerPrefs.Save(); 
+            // Enable game over UI
+            gameOverText.gameObject.SetActive(true);
+
+            // Stop the snake from moving
+            isMoving = false;
         }
         else if (other.gameObject.CompareTag("Wall"))
         {
-            if (moveThroughWalls) {
+            if (moveThroughWalls)
+            {
                 Traverse(other.transform);
-            } else {
+            }
+            else
+            {
                 ResetState();
             }
         }
@@ -143,5 +187,7 @@ public class Snake : MonoBehaviour
 
         transform.position = position;
     }
+
+
 
 }

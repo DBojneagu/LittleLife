@@ -1,12 +1,4 @@
-﻿// ******------------------------------------------------------******
-// ProductManager.cs
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
+﻿
 using UnityEngine;
 using System.Collections;
 using System.Linq;
@@ -17,19 +9,9 @@ namespace PW
 {
     public class ProductManager : MonoBehaviour
     {
-        /// <summary>
-        /// Array of products that would be used in game.
-        /// You can add new ones in the editor inspector of this script.
-        /// see ProductManagerEditor script for how it handles and change it as you like.
-        /// </summary>
         [SerializeField]
         public Product[] Products;
 
-        /// <summary>
-        /// This should point to the folder you set in the screenshot helper
-        /// If you didn't change it for your own purposes this would work with default value.
-        /// <see cref="ScreenShotHelper.ScreenShotPath"/>
-        /// </summary>
         [SerializeField]
         public string ProductScreenshotsPath;
 

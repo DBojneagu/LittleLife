@@ -2,6 +2,9 @@ using UnityEngine;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using TMPro;
+using Unity.VisualScripting;
 
 namespace PW
 {
@@ -9,6 +12,8 @@ namespace PW
     {
         public GameObject finishPanel; // Use GameObject instead of Canvas or Panel directly
         public Image starIcon;
+        public TextMeshProUGUI Congrats;
+        public Button Home;
         private int rightOrders = 0;
         private int ordersOutOfTime = 0;
         private bool gameFinished = false;
@@ -62,11 +67,25 @@ namespace PW
             int nrcoins = PlayerPrefs.GetInt("EarnedCoins");
             //nrcoins++;
             nrcoins+= coinsToAdd;
+
+            string userPath = Application.dataPath + "/Data/UserData.json";
+            string json = File.ReadAllText(userPath);
+            UserData user = JsonUtility.FromJson<UserData>(json);
+
+            user.Score += coinsToAdd;
+
+            json = JsonUtility.ToJson(user, true);
+            File.WriteAllText(userPath, json);
+
             PlayerPrefs.SetInt("EarnedCoins", nrcoins);
             PlayerPrefs.Save();
             DisplayStars(stars);
             //DisplayStars(stars);
             finishPanel.SetActive(true); // Use SetActive on the GameObject
+
+    
+            Home.gameObject.SetActive(true);
+            Congrats.gameObject.SetActive(true);
         }
 
         public int CalculateStars()
@@ -99,17 +118,16 @@ namespace PW
                 Destroy(child.gameObject);
             }
 
-            // Duplicate the existing star image based on the number of stars
+
             for (int i = 0; i < 3; i++)
             {
                 GameObject star = Instantiate(starIcon.gameObject);
                 star.transform.SetParent(finishPanel.transform);
                 star.SetActive(true);
 
-                // Calculate the alpha (transparency) based on the current star's position
                 float alpha = i < stars ? 1f : 0.3f; // Adjust the alpha values as needed
 
-                // Set the alpha of the star image
+
                 Image starImage = star.GetComponent<Image>();
                 Color starColor = starImage.color;
                 starColor.a = alpha;
@@ -151,7 +169,7 @@ namespace PW
                 {
                     starSize = 70f;
                 }
-                // Adjust the size based on your requirements
+                
                 starRectTransform.sizeDelta = new Vector2(starSize, starSize);
             }
         }

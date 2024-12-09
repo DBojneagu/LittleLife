@@ -15,9 +15,11 @@ public class Q1 : MonoBehaviour
     //public bool isCompletedClaim=0;
     public Button myButton;
     public Q2 quest2;
+    public Q3 quest3;
+    public Q44 quest4;
 
     private const string LastTaskChangeKey = "LastTaskChangeTime";
-    private const float MinutesToWait = 5f; // 24 hours // Change this to 1 for one minute
+    private const float MinutesToWait = 7f; // 24 hours // Change this to 1 for one minute
 
     private void Awake()
     {
@@ -119,6 +121,8 @@ public class Q1 : MonoBehaviour
                 // Set the task text based on the random index
                 taskText.text = taskTexts[randomIndex];
                 quest2.SelectTask();
+                quest3.SelectTask();
+                quest4.SelectTask();
                 // Update the last task change time
                 SaveLastTaskChangeTime(currentTime);
             }
@@ -154,8 +158,8 @@ public class Q1 : MonoBehaviour
     public void BlurTask()
     {
         int isCompletedCafe = PlayerPrefs.GetInt("CompletedCafe");
-        Debug.LogError(isCompletedCafe);
-        Debug.LogError(taskText.text);
+        Debug.Log(isCompletedCafe);
+        Debug.Log(taskText.text);
         if (taskText != null && isCompletedCafe == 1)
         {
             // Set the alpha (transparency) of the text to 0
@@ -166,14 +170,14 @@ public class Q1 : MonoBehaviour
 
             if (taskText.text.StartsWith("C"))
             {
-                Debug.LogError("first");
+                Debug.Log("first");
                 myButton.GetComponent<ButtonActivation>().ActivateButton();
             }
             if (taskText.text.StartsWith("T"))
             {
                 if (stars >= 2)
                 {
-                    Debug.LogError("second");
+                    Debug.Log("second");
                     myButton.GetComponent<ButtonActivation>().ActivateButton();
                 }
                 else
@@ -182,7 +186,7 @@ public class Q1 : MonoBehaviour
                     textColor.a = 1f;
                     taskText.color = textColor;
                     myButton.GetComponent<ButtonActivation>().DezActivateButton();
-                    Debug.LogError("second");
+                    Debug.Log("second");
                     PlayerPrefs.SetInt("CompletedCafe", 0);
                     PlayerPrefs.Save();
                 }
@@ -191,7 +195,7 @@ public class Q1 : MonoBehaviour
             {
                 if (stars >= 1)
                 {
-                    Debug.LogError("third");
+                    Debug.Log("third");
                     myButton.GetComponent<ButtonActivation>().ActivateButton();
 
                 }
@@ -201,7 +205,7 @@ public class Q1 : MonoBehaviour
                     textColor.a = 1f;
                     taskText.color = textColor;
                     myButton.GetComponent<ButtonActivation>().DezActivateButton();
-                    Debug.LogError("third");
+                    Debug.Log("third");
                     PlayerPrefs.SetInt("CompletedCafe", 0);
                     PlayerPrefs.Save();
                 }
@@ -212,11 +216,11 @@ public class Q1 : MonoBehaviour
         {
             if (isCompletedCafe == 0 || isCompletedCafe == null)
             {
-                Debug.LogError("all good");
+                Debug.Log("all good");
             }
             else
             {
-                Debug.LogError("TextMeshProUGUI component not assigned to TaskCompletion script.");
+                Debug.Log("TextMeshProUGUI component not assigned to TaskCompletion script.");
             }
         }
     }

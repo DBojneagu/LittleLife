@@ -1,16 +1,4 @@
-﻿// ******------------------------------------------------------******
-// PlayerSlots.cs
-//
-// PlayerSlots is some kind of a inventory mechanism. 
-// When player has a product or thing in their hands, we add the item to slots.
-//
-//
-// Author:
-//       K.Sinan Acar <ksa@puzzledwizard.com>
-//
-// Copyright (c) 2019 PuzzledWizard
-//
-// ******------------------------------------------------------******
+﻿
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +11,6 @@ namespace PW
     {
         public int slotCount;
 
-        //Player holds order ID's of items in those slots;
         int[] slotItems;
 
         public Image[] slotUIObjects;
@@ -57,7 +44,6 @@ namespace PW
 
         public IEnumerator DoEmphasize(int index)
         {
-            //You can do a better version of this with DOTween punchscale;
             var uiImage = slotUIObjects[index];
             var outline = uiImage.GetComponent<Outline>();
             Color outlineColor = outline.effectColor;
@@ -89,8 +75,7 @@ namespace PW
 
         public bool CanHoldItem(int orderID)
         {
-            //you can also check for orderID here such
-            //maybe you don't want to let player hold the same order more than once.
+
             var emptyIndex = Array.IndexOf(slotItems, -1);
 
             return emptyIndex >= 0;
